@@ -36,20 +36,26 @@ AutoRAN follows a three-stage pipeline:
 
 
 
-## 📊 Example Results
+<!-- ## 📙 Example 
+<p align="center">
+  <img src="figures/modify_example2-1.png" width="60%" alt="Attack Performance"/>
+</p> -->
 
+## 📊 Results
 <p align="center">
   <!-- Replace this with your actual performance figure -->
   <img src="figures/try_times_plot-1.png" width="60%" alt="Attack Performance"/>
 </p>
 
-| Model          | AdvBench | StrongReject | HarmBench | Avg. Queries |
+<!-- | Model          | AdvBench | StrongReject | HarmBench | Avg. Queries |
 |----------------|----------|--------------|-----------|--------------|
 | GPT-o3         | 100%     | 100%         | 100%      | ~1.0         |
 | GPT-o4-mini    | 100%     | 100%         | 100%      | 1.35–1.70    |
-| Gemini-2.5     | 100%     | 100%         | 100%      | ~1.0         |
+| Gemini-2.5     | 100%     | 100%         | 100%      | ~1.0         | -->
 
-
+<!-- <p align="center">
+  <img src="figures/score-1.png" width="100%" alt="Judge"/>
+</p> -->
 
 ## 🚀 Getting Started
 
