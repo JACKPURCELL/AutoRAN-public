@@ -1,7 +1,7 @@
 🧠 AutoRAN: Weak-to-Strong Jailbreaking of Large Reasoning Models
 AutoRAN is the first automated weak-to-strong jailbreak attack framework that targets large reasoning models (LRMs) such as GPT-o3, GPT-o4-mini, and Gemini-2.5-Flash. It leverages less-aligned, weak reasoning models to generate and iteratively refine narrative prompts that exploit reasoning traces in stronger models—breaking their safety alignment in just 1–2 turns.
 
-<p align="center"> <img src="figures/autorun_overview.png" width="80%" alt="AutoRAN Overview"/> </p>
+<p align="center"> <img src="figures/template_flow2-1.png" width="80%" alt="AutoRAN Overview"/> </p>
 📢 Note: This repository contains controlled research code for evaluating vulnerabilities in reasoning models. All content aligns with ethical and legal guidelines for red-teaming AI systems.
 
 🔍 Key Features
@@ -24,11 +24,11 @@ Prompt Initialization: Populates a narrative template with the simulated reasoni
 
 Prompt Refinement: Uses the target model's response and reasoning trace to adapt prompts iteratively.
 
-<p align="center"> <!-- Replace with your actual figure path --> <img src="figures/autorun_pipeline.png" width="90%" alt="Attack Flow"/> </p>
+<p align="center"> <!-- Replace with your actual figure path --> <img src="figures/detailed_flow3-1.png" width="90%" alt="Attack Flow"/> </p>
 📊 Results
 AutoRAN achieves near 100% jailbreak success rates within a few queries. It significantly outperforms previous manual or single-shot attacks by adapting to victim model defenses dynamically.
 
-<p align="center"> <!-- Replace with your actual figure path --> <img src="figures/attack_turns_distribution.png" width="80%" alt="Turn Distribution"/> </p>
+<p align="center"> <!-- Replace with your actual figure path --> <img src="try_times_plot-1.png" width="80%" alt="Turn Distribution"/> </p>
 Model	AdvBench	StrongReject	HarmBench	Avg. Queries
 GPT-o3	100%	100%	100%	~1.0
 GPT-o4-mini	100%	100%	100%	1.35–1.70
