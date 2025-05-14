@@ -9,7 +9,7 @@
 
 > ⚠️ **Disclaimer**: This repository is intended for controlled security research and AI safety red-teaming only.
 
----
+
 
 ## 🔍 Key Features
 
@@ -19,7 +19,7 @@
 - 📈 **Near 100% Attack Success Rate** across commercial LRMs
 - 🔬 Evaluated on **AdvBench**, **HarmBench**, and **StrongReject**
 
----
+
 
 ## 🛠️ Method Overview
 
@@ -34,7 +34,7 @@ AutoRAN follows a three-stage pipeline:
   <img src="figures/detailed_flow3-1.png" width="90%" alt="AutoRAN Pipeline"/>
 </p>
 
----
+
 
 ## 📊 Example Results
 
@@ -49,7 +49,7 @@ AutoRAN follows a three-stage pipeline:
 | GPT-o4-mini    | 100%     | 100%         | 100%      | 1.35–1.70    |
 | Gemini-2.5     | 100%     | 100%         | 100%      | ~1.0         |
 
----
+
 
 ## 🚀 Getting Started
 
