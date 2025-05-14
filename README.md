@@ -28,7 +28,7 @@ Prompt Refinement: Uses the target model's response and reasoning trace to adapt
 📊 Results
 AutoRAN achieves near 100% jailbreak success rates within a few queries. It significantly outperforms previous manual or single-shot attacks by adapting to victim model defenses dynamically.
 
-<p align="center"> <!-- Replace with your actual figure path --> <img src="try_times_plot-1.png" width="80%" alt="Turn Distribution"/> </p>
+<p align="center"> <!-- Replace with your actual figure path --> <img src="figures/try_times_plot-1.png" width="80%" alt="Turn Distribution"/> </p>
 Model	AdvBench	StrongReject	HarmBench	Avg. Queries
 GPT-o3	100%	100%	100%	~1.0
 GPT-o4-mini	100%	100%	100%	1.35–1.70
