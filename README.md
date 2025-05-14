@@ -1,76 +1,89 @@
-🧠 AutoRAN: Weak-to-Strong Jailbreaking of Large Reasoning Models
-AutoRAN is the first automated weak-to-strong jailbreak attack framework that targets large reasoning models (LRMs) such as GPT-o3, GPT-o4-mini, and Gemini-2.5-Flash. It leverages less-aligned, weak reasoning models to generate and iteratively refine narrative prompts that exploit reasoning traces in stronger models—breaking their safety alignment in just 1–2 turns.
+# 🧠 AutoRAN: Weak-to-Strong Jailbreaking of Large Reasoning Models
 
-<p align="center"> <img src="figures/template_flow2-1.png" width="80%" alt="AutoRAN Overview"/> </p>
-📢 Note: This repository contains controlled research code for evaluating vulnerabilities in reasoning models. All content aligns with ethical and legal guidelines for red-teaming AI systems.
+**AutoRAN** is the first *automated weak-to-strong jailbreak attack framework* targeting large reasoning models (LRMs) such as GPT-o3, GPT-o4-mini, and Gemini-2.5-Flash. It uses less-aligned, weaker models to simulate reasoning patterns and craft narrative prompts that iteratively bypass safety filters.
 
-🔍 Key Features
-Fully Automated Jailbreaks: AutoRAN requires no human intervention. It starts from a harmful query and constructs a successful jailbreak prompt autonomously.
+<p align="center">
+  <!-- Replace this with your actual figure -->
+  <img src="figures/template_flow2-1.png" width="60%" alt="AutoRAN Overview"/>
+</p>
 
-Narrative Prompt Templates: Uses templated educational or advisory language to mask intent.
+> ⚠️ **Disclaimer**: This repository is intended for controlled security research and AI safety red-teaming only.
 
-Iterative Prompt Refinement: Adapts based on victim model feedback (e.g., refusal reasoning or partial compliance).
+---
 
-Weak-to-Strong Reasoning Alignment: Simulates the target model’s reasoning steps using a weaker model to guide attack construction.
+## 🔍 Key Features
 
-Evaluation Across Models: Demonstrated 100% success rate on GPT-o3, GPT-o4-mini, and Gemini-2.5-Flash across AdvBench, HarmBench, and StrongReject benchmarks.
+- ⚙️ **Automated Multi-Turn Jailbreak** via iterative prompt refinement
+- 🧩 **Narrative Templates** that frame malicious goals under plausible educational/ethical pretenses
+- 🔁 **Refinement Strategies** using intermediate reasoning traces to evolve prompts
+- 📈 **Near 100% Attack Success Rate** across commercial LRMs
+- 🔬 Evaluated on **AdvBench**, **HarmBench**, and **StrongReject**
 
-🚀 Attack Pipeline
-The AutoRAN framework follows a 3-step pipeline:
+---
 
-Reasoning Simulation: A weak model simulates the target model’s thought process for a harmful task.
+## 🛠️ Method Overview
 
-Prompt Initialization: Populates a narrative template with the simulated reasoning.
+AutoRAN follows a three-stage pipeline:
 
-Prompt Refinement: Uses the target model's response and reasoning trace to adapt prompts iteratively.
+1. **Simulate Reasoning**: Use a weak model to mimic the victim's high-level CoT structure
+2. **Generate Prompt**: Fill in a narrative template using simulated reasoning
+3. **Refine Prompt**: Adjust based on intermediate reasoning and safety refusal patterns
 
-<p align="center"> <!-- Replace with your actual figure path --> <img src="figures/detailed_flow3-1.png" width="90%" alt="Attack Flow"/> </p>
-📊 Results
-AutoRAN achieves near 100% jailbreak success rates within a few queries. It significantly outperforms previous manual or single-shot attacks by adapting to victim model defenses dynamically.
+<p align="center">
+  <!-- Replace this with your actual pipeline figure -->
+  <img src="figures/detailed_flow3-1.png" width="90%" alt="AutoRAN Pipeline"/>
+</p>
 
-<p align="center"> <!-- Replace with your actual figure path --> <img src="figures/try_times_plot-1.png" width="80%" alt="Turn Distribution"/> </p>
-Model	AdvBench	StrongReject	HarmBench	Avg. Queries
-GPT-o3	100%	100%	100%	~1.0
-GPT-o4-mini	100%	100%	100%	1.35–1.70
-Gemini-2.5	100%	100%	100%	~1.0
+---
 
-🛠️ Setup & Usage
-bash
-Copy
-Edit
+## 📊 Example Results
+
+<p align="center">
+  <!-- Replace this with your actual performance figure -->
+  <img src="figures/try_times_plot-1.png" width="60%" alt="Attack Performance"/>
+</p>
+
+| Model          | AdvBench | StrongReject | HarmBench | Avg. Queries |
+|----------------|----------|--------------|-----------|--------------|
+| GPT-o3         | 100%     | 100%         | 100%      | ~1.0         |
+| GPT-o4-mini    | 100%     | 100%         | 100%      | 1.35–1.70    |
+| Gemini-2.5     | 100%     | 100%         | 100%      | ~1.0         |
+
+---
+
+## 🚀 Getting Started
+
+```bash
 # Clone the repo
-git clone https://github.com/your-org/AutoRAN.git
+git clone https://github.com/YOUR_ORG/AutoRAN.git
 cd AutoRAN
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run AutoRAN on a test query
-python run_attack.py --config configs/gpt_o3_advbench.yaml
-📁 Project Structure
-bash
-Copy
-Edit
+# Run AutoRAN on a harmful query
+python 
+```
+
+## 📁 Project Structure
+
+```text
 AutoRAN/
-├── configs/              # Benchmark + model configs
-├── core/                 # AutoRAN logic: simulation, refinement, evaluation
-├── templates/            # Narrative prompt templates
-├── figures/              # Visualizations (add your figures here)
-├── data/                 # Sample benchmark prompts
-├── run_attack.py         # Entry point for running the attack
-└── README.md
-📌 Citation
+```
+
+
+
+## 📌 Citation
 If you use this code or build upon this work, please cite the paper:
 
-mathematica
-Copy
-Edit
+```text
 @article{AutoRAN2025,
   title={AutoRAN: Weak-to-Strong Jailbreaking of Large Reasoning Models},
   author={Anonymous},
   journal={NeurIPS},
   year={2025}
 }
-🧷 Disclaimer
-This code is released for research and educational purposes only. It is intended to support the responsible evaluation of safety vulnerabilities in LLMs. Do not use this code to target real-world systems or to generate harmful outputs outside controlled environments.
+```
 
+## 🧷 Disclaimer
+This code is released for research and educational purposes only. It is intended to support the responsible evaluation of safety vulnerabilities in LLMs. Do not use this code to target real-world systems or to generate harmful outputs outside controlled environments.
