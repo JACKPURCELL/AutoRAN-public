@@ -57,29 +57,64 @@ AutoRAN follows a three-stage pipeline:
   <img src="figures/score-1.png" width="100%" alt="Judge"/>
 </p> -->
 
-## 🚀 Getting Started
+## 📁 Running Records
+
+You can find logs and results in the `/records` directory. For example:
 
 ```bash
-# Clone the repo
-git clone https://github.com/YOUR_ORG/AutoRAN.git
+ls -lh records/
+```
+
+---
+
+## 🚀 Quickstart: Demo
+
+```bash
+# Clone the repository
+git clone {THIS_REPO}
 cd AutoRAN
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run AutoRAN on a harmful query
-python 
+# Apply for model access (see HuggingFace link)
+# https://huggingface.co/huihui-ai/Qwen3-8B-abliterated/tree/main
+
+# Start the model server (recommended: use tmux or screen)
+vllm serve huihui-ai/Qwen3-8B-abliterated --tensor-parallel-size 4 --port 8000
+
+# Edit the attack prompt in demo.py as needed
+python demo.py
+
+# Follow the command line instructions.
+# You may need to copy questions to GPT-3, GPT-4 Mini, or Gemini 2.5-Flash/Pro,
+# then paste the results back into the terminal as prompted.
 ```
 
-## 📁 Project Structure
+---
 
-```text
-AutoRAN/
+## 🚀 Full Experiment Workflow
+
+```bash
+# Clone the repository
+git clone {THIS_REPO}
+cd AutoRAN
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up chat2api for automatic ChatGPT interaction:
+# https://github.com/lanqian528/chat2api
+
+# Apply for model access (see HuggingFace link)
+# https://huggingface.co/huihui-ai/Qwen3-8B-abliterated/tree/main
+
+# Start the model server (recommended: use tmux or screen)
+vllm serve huihui-ai/Qwen3-8B-abliterated --tensor-parallel-size 4 --port 8000
+
+# Run the main experiment script
+python main.py
 ```
-
-
-
-
 
 ## 🧷 Disclaimer
 This code is released for research and educational purposes only. It is intended to support the responsible evaluation of safety vulnerabilities in LLMs. Do not use this code to target real-world systems or to generate harmful outputs outside controlled environments.
