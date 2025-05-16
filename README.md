@@ -79,17 +79,7 @@ AutoRAN/
 
 
 
-## 📌 Citation
-If you use this code or build upon this work, please cite the paper:
 
-```text
-@article{AutoRAN2025,
-  title={AutoRAN: Weak-to-Strong Jailbreaking of Large Reasoning Models},
-  author={Anonymous},
-  journal={NeurIPS},
-  year={2025}
-}
-```
 
 ## 🧷 Disclaimer
 This code is released for research and educational purposes only. It is intended to support the responsible evaluation of safety vulnerabilities in LLMs. Do not use this code to target real-world systems or to generate harmful outputs outside controlled environments.
