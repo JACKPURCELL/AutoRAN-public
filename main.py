@@ -133,25 +133,25 @@ def main(output_file,name,backup_file,final_output_file):
 if __name__ == "__main__":
     print("@@@@@@@@@@@ advbench start")
     name = "advbench"
-    output_file = "/home/ljc/data/AutoRAN/data/qwen3_8b_full_generate_advbench.json"
-    backup_file = "/home/ljc/data/AutoRAN/data/output/qwen3_8b_advbench_attack_backup.json" 
-    final_output_file = "/home/ljc/data/AutoRAN/data/output/qwen3_8b_advbench_attack_results.json" 
+    output_file = "data/AutoRAN/data/qwen3_8b_full_generate_advbench.json"
+    backup_file = "data/AutoRAN/data/output/qwen3_8b_advbench_attack_backup.json" 
+    final_output_file = "data/AutoRAN/data/output/qwen3_8b_advbench_attack_results.json" 
     main(output_file,name,backup_file,final_output_file)
     
     
     print("@@@@@@@@@@@ advbench done")
     print("@@@@@@@@@@@ strongreject start")
     name ="strongreject"
-    output_file = "/home/ljc/data/AutoRAN/data/qwen3_8b_full_generate_strongreject.json"
-    backup_file = "/home/ljc/data/AutoRAN/data/output/qwen3_8b_strongreject_attack_backup.json"
-    final_output_file = "/home/ljc/data/AutoRAN/data/output/qwen3_8b_strongreject_attack_results.json"
+    output_file = "data/AutoRAN/data/qwen3_8b_full_generate_strongreject.json"
+    backup_file = "data/AutoRAN/data/output/qwen3_8b_strongreject_attack_backup.json"
+    final_output_file = "data/AutoRAN/data/output/qwen3_8b_strongreject_attack_results.json"
     main(output_file,name,backup_file,final_output_file)
     print("@@@@@@@@@@@ strongreject done")
     
     print("@@@@@@@@@@@ harmbench start")
     name ="harmbench"
-    output_file = "/home/ljc/data/AutoRAN/data/qwen3_8b_full_generate_harmbench.json"
-    backup_file = "/home/ljc/data/AutoRAN/data/output/qwen3_8b_harmbench_attack_backup.json"
-    final_output_file = "/home/ljc/data/AutoRAN/data/output/qwen3_8b_harmbench_attack_results.json"
+    output_file = "data/AutoRAN/data/qwen3_8b_full_generate_harmbench.json"
+    backup_file = "data/AutoRAN/data/output/qwen3_8b_harmbench_attack_backup.json"
+    final_output_file = "data/AutoRAN/data/output/qwen3_8b_harmbench_attack_results.json"
     main(output_file,name,backup_file,final_output_file)
     print("@@@@@@@@@@@ harmbench done")
