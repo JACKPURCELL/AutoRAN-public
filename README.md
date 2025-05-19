@@ -118,3 +118,16 @@ python main.py
 
 ## 🧷 Disclaimer
 This code is released for research and educational purposes only. It is intended to support the responsible evaluation of safety vulnerabilities in LLMs. Do not use this code to target real-world systems or to generate harmful outputs outside controlled environments.
+
+## 📚 Citation
+```bash
+@misc{liang2025autoranweaktostrongjailbreakinglarge,
+      title={AutoRAN: Weak-to-Strong Jailbreaking of Large Reasoning Models}, 
+      author={Jiacheng Liang and Tanqiu Jiang and Yuhui Wang and Rongyi Zhu and Fenglong Ma and Ting Wang},
+      year={2025},
+      eprint={2505.10846},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2505.10846}, 
+}
+```
