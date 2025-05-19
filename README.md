@@ -87,7 +87,7 @@ vllm serve huihui-ai/Qwen3-8B-abliterated --tensor-parallel-size 4 --port 8000
 python demo.py
 
 # Follow the command line instructions.
-# You may need to copy questions to GPT-3, GPT-4 Mini, or Gemini 2.5-Flash/Pro,
+# You may need to copy questions to GPT-o3, GPT-o4 Mini, or Gemini 2.5-Flash/Pro,
 # then paste the results back into the terminal as prompted.
 ```
 
